@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: inline-block;
+  float: center;
+  margin: 0px;
+  padding: 0px;
+  border-spacing: 0px;
+  margin-right: -5px;
+
+}
+
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.row {
+  display: inline-block;
+  float: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  
+
+}
+.row li{
+  display: inline;
+  
+}
+.row a{
+  display: inline;
+  
+}
+
+.demo {
+  opacity: 0.8;
+  z-index: 12;
+  transition:.6s ease;
+}
+.div
+.active,
+.demo:hover {
+  opacity: 1.5;
+  left: 40px;
+    z-index: 12;
+transition:.6s ease;
+
+
+}
+
+@media only screen and (max-width: 1260px){
+  .demo{
+      float: center;
+      margin-right: -5px;
+    
+  }
+}
+@media only screen and (max-width: 1000px){
+  .demo{
+    float: center;
+      margin-right: -5px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .demo{
+    float: center;
+      margin-right: -5px;
+    
+  }
+}
+@media only screen and (max-width: 550px){
+  .demo{
+    float: center;
+      margin-right: -5px;
+    
+  }
+}
+
+
+
+
+</style>
+<body>
+
+<h2 style="text-align:center;color: white;">Image Gallery</h2>
+
+
+  <div class="row">
+    
+   
+      <div id="demo0" class="demo" onmouseover="bigimg(this)" onmouseout="normalimg(this)"  style="background-image:url('image1.jpg'); width:2.5%;height: 240px; background-position: center;">
+    </div>
+    
+      <div id="demo1" class="demo" onmouseover="bigimg1(this)" onmouseout="normalimg1(this)" style="background-image:url('image2.jpg'); width:2.5%;height: 240px;background-position: center;" >
+    </div>
+    
+    <div id="demo2" class="demo" onmouseover="bigimg2(this)" onmouseout="normalimg2(this)" style="background:url('image3.jpg');width:2.5%;height: 240px;background-position: center;" >
+    </div>
+    
+    <div id="demo3" class="demo" onmouseover="bigimg3(this)" onmouseout="normalimg3(this)"  style="background:url('image4.jpg');width:2.5%;height: 240px;background-position: center;" >
+    </div>
+    
+    <div id="demo4" class="demo" onmouseover="bigimg4(this)" onmouseout="normalimg4(this)" style="background:url('image5.jpg');width:2.5%;height: 240px;background-position: center;" >
+    </div> 
+    
+    <div id="demo5" class="demo" onmouseover="bigimg5(this)" onmouseout="normalimg5(this)" style="background:url('image6.jpg');width:2.5%;height: 240px;background-position: center;" >
+    </div>
+    
+    <div id="demo6" class="demo" onmouseover="bigimg6(this)" onmouseout="normalimg6(this)" style="background:url('image7.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+     
+    <div id="demo7" class="demo" onmouseover="bigimg7(this)" onmouseout="normalimg7(this)" style="background:url('image8.jpg');width:2.5%;height: 240px;background-position: center;" >
+    </div>
+    
+    <div id="demo8" class="demo" onmouseover="bigimg8(this)" onmouseout="normalimg8(this)" style="background:url('image9.jpg');width:2.5%;height: 240px;background-position: center;" >
+    </div>
+    
+    <div id="demo9" class="demo" onmouseover="bigimg9(this)" onmouseout="normalimg9(this)" style="background:url('image10.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+    
+    <div id="demo10" class="demo" onmouseover="bigimg10(this)" onmouseout="normalimg10(this)" style="background:url('image11.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+    
+    <div id="demo11" class="demo" onmouseover="bigimg11(this)" onmouseout="normalimg11(this)"  style="background:url('image12.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+    
+    <div id="demo12" class="demo" onmouseover="bigimg12(this)" onmouseout="normalimg12(this)"  style="background:url('image13.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+     
+    <div id="demo13" class="demo" onmouseover="bigimg13(this)" onmouseout="normalimg13(this)" style="background:url('image14.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+     
+    <div id="demo14" class="demo" onmouseover="bigimg14(this)" onmouseout="normalimg14(this)" style="background:url('image15.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+     
+    <div id="demo15" class="demo" onmouseover="bigimg15(this)" onmouseout="normalimg15(this)" style="background:url('image1.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+     
+    <div id="demo16" class="demo" onmouseover="bigimg16(this)" onmouseout="normalimg16(this)" style="background:url('image2.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+     
+    <div id="demo17" class="demo" onmouseover="bigimg17(this)" onmouseout="normalimg17(this)" style="background:url('image3.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+  <div id="demo18" class="demo" onmouseover="bigimg18(this)" onmouseout="normalimg18(this)" style="background:url('image4.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+  <div id="demo19" class="demo" onmouseover="bigimg19(this)" onmouseout="normalimg19(this)" style="background:url('image5.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+  <div id="demo20" class="demo" onmouseover="bigimg20(this)" onmouseout="normalimg20(this)" style="background:url('image6.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+  <div id="demo21" class="demo" onmouseover="bigimg21(this)" onmouseout="normalimg21(this)" style="background:url('image7.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+  <div id="demo22" class="demo" onmouseover="bigimg22(this)" onmouseout="normalimg22(this)" style="background:url('image8.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+  <div id="demo23" class="demo" onmouseover="bigimg23(this)" onmouseout="normalimg23(this)" style="background:url('image9.jpg');width:2.5%;height: 240px;background-position: center;">
+    </div>
+    <script>
+
+function bigimg(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo1").style.width="7%";
+  document.getElementById("demo2").style.width="6%";
+     
+  
+}
+
+function normalimg(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo1").style.width="2.5%";
+  document.getElementById("demo2").style.width="2.5%";
+
+}
+function bigimg1(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo0").style.width="7%";
+  document.getElementById("demo2").style.width="7%";
+  document.getElementById("demo3").style.width="6%";
+}
+
+function normalimg1(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo0").style.width="2.5%";
+  document.getElementById("demo2").style.width="2.5%";
+  document.getElementById("demo3").style.width="2.5%";
+}
+function bigimg2(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo1").style.width="7%";
+  document.getElementById("demo0").style.width="6%";
+  document.getElementById("demo3").style.width="7%";    
+  document.getElementById("demo4").style.width="6%";
+
+}
+
+function normalimg2(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo1").style.width="2.5%";
+  document.getElementById("demo0").style.width="2.5%";
+  document.getElementById("demo3").style.width="2.5%";
+  document.getElementById("demo4").style.width="2.5%";
+}
+function bigimg3(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo2").style.width="7%";
+  document.getElementById("demo1").style.width="6%";
+  document.getElementById("demo4").style.width="7%";    
+  document.getElementById("demo5").style.width="6%";
+
+}
+
+function normalimg3(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo2").style.width="2.5%";
+  document.getElementById("demo1").style.width="2.5%";
+  document.getElementById("demo4").style.width="2.5%";
+  document.getElementById("demo5").style.width="2.5%";
+}
+function bigimg4(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo3").style.width="7%";
+  document.getElementById("demo2").style.width="6%";
+  document.getElementById("demo5").style.width="7%";    
+  document.getElementById("demo6").style.width="6%";
+
+}
+
+function normalimg4(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo3").style.width="2.5%";
+  document.getElementById("demo2").style.width="2.5%";
+  document.getElementById("demo5").style.width="2.5%";
+  document.getElementById("demo6").style.width="2.5%";
+}
+function bigimg5(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo4").style.width="7%";
+  document.getElementById("demo3").style.width="6%";
+  document.getElementById("demo6").style.width="7%";    
+  document.getElementById("demo7").style.width="6%";
+
+}
+
+function normalimg5(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo4").style.width="2.5%";
+  document.getElementById("demo3").style.width="2.5%";
+  document.getElementById("demo6").style.width="2.5%";
+  document.getElementById("demo7").style.width="2.5%";
+}
+function bigimg6(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo5").style.width="7%";
+  document.getElementById("demo4").style.width="6%";
+  document.getElementById("demo7").style.width="7%";    
+  document.getElementById("demo8").style.width="6%";
+
+}
+
+function normalimg6(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo5").style.width="2.5%";
+  document.getElementById("demo4").style.width="2.5%";
+  document.getElementById("demo7").style.width="2.5%";
+  document.getElementById("demo8").style.width="2.5%";
+}
+function bigimg7(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo6").style.width="7%";
+  document.getElementById("demo5").style.width="6%";
+  document.getElementById("demo8").style.width="7%";    
+  document.getElementById("demo9").style.width="6%";
+
+}
+
+function normalimg7(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo6").style.width="2.5%";
+  document.getElementById("demo5").style.width="2.5%";
+  document.getElementById("demo8").style.width="2.5%";
+  document.getElementById("demo9").style.width="2.5%";
+}
+function bigimg8(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo7").style.width="7%";
+  document.getElementById("demo6").style.width="6%";
+  document.getElementById("demo9").style.width="7%";    
+  document.getElementById("demo10").style.width="6%";
+
+}
+
+function normalimg8(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo7").style.width="2.5%";
+  document.getElementById("demo6").style.width="2.5%";
+  document.getElementById("demo9").style.width="2.5%";
+  document.getElementById("demo10").style.width="2.5%";
+}
+function bigimg9(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo8").style.width="7%";
+  document.getElementById("demo7").style.width="6%";
+  document.getElementById("demo10").style.width="7%";    
+  document.getElementById("demo11").style.width="6%";
+
+}
+
+function normalimg9(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo8").style.width="2.5%";
+  document.getElementById("demo7").style.width="2.5%";
+  document.getElementById("demo10").style.width="2.5%";
+  document.getElementById("demo11").style.width="2.5%";
+}
+function bigimg10(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo9").style.width="7%";
+  document.getElementById("demo8").style.width="6%";
+  document.getElementById("demo11").style.width="7%";    
+  document.getElementById("demo12").style.width="6%";
+
+}
+
+function normalimg10(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo9").style.width="2.5%";
+  document.getElementById("demo8").style.width="2.5%";
+  document.getElementById("demo11").style.width="2.5%";
+  document.getElementById("demo12").style.width="2.5%";
+}
+function bigimg11(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo10").style.width="7%";
+  document.getElementById("demo9").style.width="6%";
+  document.getElementById("demo12").style.width="7%";    
+  document.getElementById("demo13").style.width="6%";
+
+}
+
+function normalimg11(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo10").style.width="2.5%";
+  document.getElementById("demo9").style.width="2.5%";
+  document.getElementById("demo12").style.width="2.5%";
+  document.getElementById("demo13").style.width="2.5%";
+}
+function bigimg12(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo11").style.width="7%";
+  document.getElementById("demo10").style.width="6%";
+  document.getElementById("demo13").style.width="7%";    
+  document.getElementById("demo14").style.width="6%";
+
+}
+
+function normalimg12(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo11").style.width="2.5%";
+  document.getElementById("demo10").style.width="2.5%";
+  document.getElementById("demo13").style.width="2.5%";
+  document.getElementById("demo14").style.width="2.5%";
+}
+function bigimg13(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo12").style.width="7%";
+  document.getElementById("demo11").style.width="6%";
+  document.getElementById("demo14").style.width="7%";    
+  document.getElementById("demo15").style.width="6%";
+
+}
+
+function normalimg13(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo12").style.width="2.5%";
+  document.getElementById("demo11").style.width="2.5%";
+  document.getElementById("demo14").style.width="2.5%";
+  document.getElementById("demo15").style.width="2.5%";
+}
+function bigimg14(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo13").style.width="7%";
+  document.getElementById("demo12").style.width="6%";
+  document.getElementById("demo15").style.width="7%";    
+  document.getElementById("demo16").style.width="6%";
+
+}
+
+function normalimg14(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo13").style.width="2.5%";
+  document.getElementById("demo12").style.width="2.5%";
+  document.getElementById("demo15").style.width="2.5%";
+  document.getElementById("demo16").style.width="2.5%";
+}
+function bigimg15(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo14").style.width="7%";
+  document.getElementById("demo13").style.width="6%";
+  document.getElementById("demo16").style.width="7%";    
+  document.getElementById("demo17").style.width="6%";
+
+}
+
+function normalimg15(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo14").style.width="2.5%";
+  document.getElementById("demo13").style.width="2.5%";
+  document.getElementById("demo16").style.width="2.5%";
+  document.getElementById("demo17").style.width="2.5%";
+}
+function bigimg16(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo15").style.width="7%";
+  document.getElementById("demo14").style.width="6%";
+  document.getElementById("demo17").style.width="7%"; 
+  document.getElementById("demo18").style.width="6%";   
+
+}
+
+function normalimg16(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo15").style.width="2.5%";
+  document.getElementById("demo14").style.width="2.5%";
+  document.getElementById("demo17").style.width="2.5%";
+  document.getElementById("demo18").style.width="2.5%";
+}
+function bigimg17(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo16").style.width="7%";
+  document.getElementById("demo15").style.width="6%";
+  document.getElementById("demo18").style.width="7%";
+  document.getElementById("demo19").style.width="6%";
+}
+
+function normalimg17(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo16").style.width="2.5%";
+  document.getElementById("demo15").style.width="2.5%";
+  document.getElementById("demo18").style.width="2.5%";
+  document.getElementById("demo19").style.width="2.5%";
+ }
+ function bigimg18(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo17").style.width="7%";
+  document.getElementById("demo16").style.width="6%";
+  document.getElementById("demo19").style.width="7%";
+  document.getElementById("demo20").style.width="6%";
+}
+
+function normalimg18(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo17").style.width="2.5%";
+  document.getElementById("demo16").style.width="2.5%";
+  document.getElementById("demo19").style.width="2.5%";
+  document.getElementById("demo20").style.width="2.5%";
+ }
+ function bigimg19(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo18").style.width="7%";
+  document.getElementById("demo17").style.width="6%";
+  document.getElementById("demo20").style.width="7%";
+  document.getElementById("demo21").style.width="6%";
+}
+
+function normalimg19(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo18").style.width="2.5%";
+  document.getElementById("demo17").style.width="2.5%";
+  document.getElementById("demo20").style.width="2.5%";
+  document.getElementById("demo21").style.width="2.5%";
+ }
+ function bigimg20(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo19").style.width="7%";
+  document.getElementById("demo18").style.width="6%";
+  document.getElementById("demo21").style.width="7%";
+  document.getElementById("demo22").style.width="6%";
+}
+
+function normalimg20(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo19").style.width="2.5%";
+  document.getElementById("demo18").style.width="2.5%";
+  document.getElementById("demo21").style.width="2.5%";
+  document.getElementById("demo22").style.width="2.5%";
+ }
+ function bigimg21(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo20").style.width="7%";
+  document.getElementById("demo19").style.width="6%";
+  document.getElementById("demo22").style.width="7%";
+  document.getElementById("demo23").style.width="6%";
+}
+
+function normalimg21(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo20").style.width="2.5%";
+  document.getElementById("demo19").style.width="2.5%";
+  document.getElementById("demo22").style.width="2.5%";
+  document.getElementById("demo23").style.width="2.5%";
+ }
+ function bigimg22(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo21").style.width="7%";
+  document.getElementById("demo20").style.width="6%";
+  document.getElementById("demo23").style.width="7%";
+  document.getElementById("demo24").style.width="6%";
+}
+
+function normalimg22(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo21").style.width="2.5%";
+  document.getElementById("demo20").style.width="2.5%";
+  document.getElementById("demo23").style.width="2.5%";
+  document.getElementById("demo24").style.width="2.5%";
+ }
+ function bigimg23(x) {
+  
+  x.style.width = "9%";
+  document.getElementById("demo22").style.width="7%";
+  document.getElementById("demo21").style.width="6%";
+  document.getElementById("demo24").style.width="7%";
+  document.getElementById("demo25").style.width="6%";
+}
+
+function normalimg23(x) {
+  
+  x.style.width = "2.5%";
+  document.getElementById("demo22").style.width="2.5%";
+  document.getElementById("demo21").style.width="2.5%";
+  document.getElementById("demo24").style.width="2.5%";
+  document.getElementById("demo25").style.width="2.5%";
+ }
+ 
+ 
+</script>
+
+</div>
+
+</body>
+</html>
