@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<head>
+	<title>forms</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src='unitegallery/js/unitegallery.min.js'></script>	
+<link href="unitegallery/css/unite-gallery.css" rel="stylesheet" >
+	
+<script src="unitegallery/themes/default/ug-theme-default.js"></script>
+<link href="unitegallery/themes/default/ug-theme-default.css" rel="stylesheet">	
+
+</head>
+<style>
+	.gallery {
+		position: relative;
+		width: 300px;
+		height: 100%;
+		float: center;
+		 top: 10px;
+		left: 27%;
+		background-color: grey;
+	}
+
+.gallery { 
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 5px;
+    -webkit-column-gap: 15px;
+    column-gap: 5px;
+    padding: 10px;
+   
+   
+}
+
+div{
+	  	margin-bottom: 6.5px;
+	  	float: center;
+	  
+}
+.roundrect{
+	position: relative;
+	background-color: lightgrey;
+	left: 60%;	 
+	 box-shadow: 2px 3px #888888;
+
+}
+
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #000000;
+    position: relative;
+    left: 7%;
+    width: 200px;
+}
+ul.ks-cboxtags {
+    list-style: none;
+    position: relative;
+    top: -25px;
+    width: 100%;
+    left: -35px;
+}
+ul.ks-cboxtags li{
+  display: inline;
+}
+ul.ks-cboxtags li label{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: black;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li label {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+ul.ks-cboxtags li label::before {
+	width: 100%;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+  /*  -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    content: "\f067";*/
+    font-weight: 900;
+    font-size: 12px;
+    padding: 4px 8px 4px 4px;
+    
+    transition: transform .3s ease-in-out;
+}
+
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+   /* content: "\f00c";
+    transform: rotate(-360deg);*/
+    transition: transform .3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+    border: 2px solid white;
+    background-color: violet;
+    color: #fff;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+  display: absolute;
+}
+ul.ks-cboxtags li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+  border: 2px solid #e9a1ff;
+}
+
+
+ul.ks-cboxtags1 {
+    list-style: none;
+    position: relative;
+    top: -25px;
+    width: 100%;
+    left: -35px;
+}
+ul.ks-cboxtags1 li{
+  display: inline;
+}
+ul.ks-cboxtags1 li label{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: black;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags1 li label {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+ul.ks-cboxtags1 li label::before {
+	width: 100%;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+  /*  -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    content: "\f067";*/
+    font-weight: 900;
+    font-size: 12px;
+    padding: 4px 10px 4px 4px;
+    
+    transition: transform .3s ease-in-out;
+}
+
+
+ul.ks-cboxtags1 li input[type="checkbox"]:checked + label::before {
+   /* content: "\f00c";
+    transform: rotate(-360deg);*/
+    transition: transform .3s ease-in-out;
+}
+
+ul.ks-cboxtags1 li input[type="checkbox"]:checked + label {
+    border: 2px solid white;
+    background-color: violet;
+    color: #fff;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags1 li input[type="checkbox"] {
+  display: absolute;
+}
+ul.ks-cboxtags1 li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+ul.ks-cboxtags1 li input[type="checkbox"]:focus + label {
+  border: 2px solid #e9a1ff;
+}
+ul.ks-cboxtags1{
+	position: relative;
+	top: -1250px;
+	left: 350px;
+	
+	}
+
+
+
+
+
+
+</style>
+<body>
+	<div class="container">
+	<div class="gallery">
+		<div class="img1" class="img" style="border-radius: 7px;background: url(image1.jpg);background-position: left top;padding: 20px; width: 100px;height: 50px;"> </div>
+    	<div class="img2" class="img" style="border-radius: 7px;background: url(image2.jpg);background-position: left top;padding: 20px; width: 100px;height: 90px;"> </div>
+    	<div class="img3" class="img" style="border-radius: 7px;background: url(image3.jpg);background-position: left top;padding: 20px; width: 100px;height: 80px;"> </div>
+    	<div class="img4" class="img" style="border-radius: 7px;background: url(image4.jpg);background-position: left top;padding: 20px; width: 100px;height: 50px;"> </div>
+    	<div class="img5" class="img" style="border-radius: 7px;background: url(image5.jpg);background-position: left top;padding: 20px; width: 100px;height: 30px;"> </div>
+    	<div class="img6" class="img" style="border-radius: 7px;background: url(image6.jpg);background-position: left top;padding: 20px; width: 100px;height: 80px;"> </div>
+    <!--	<div class="img7" class="img" style="border-radius: 7px;background: url(image7.jpg);background-position: left top;padding: 20px; width: 100px;height: 50px;"> </div>-->
+    	<div class="img8" class="img" style="border-radius: 7px;background: url(image8.jpg);background-position: left top;padding: 20px; width: 100px;height: 30px;"> </div>
+    	<div class="img9" class="img" style="border-radius: 7px;background: url(image9.jpg);background-position: left top;padding: 20px; width: 100px;height: 50px;"> </div>
+    	<div class="img10" class="img" style="border-radius: 7px;background: url(image10.jpg);background-position: left top;padding: 20px; width: 100px;height: 80px;"> </div>
+    	<div class="img11" class="img" style="border-radius: 7px;background: url(image11.jpg);background-position: left top;padding: 20px; width: 100px;height: 50px;"> </div>
+    	<div class="img12" class="img" style="border-radius: 7px;background: url(image12.jpg);background-position: left top;padding: 20px; width: 100px;height: 30px;"> </div>
+    	<div class="img13" class="img" style="border-radius: 7px;background: url(image13.jpg);background-position: left top;padding: 20px; width: 100px;height: 50px;"> </div>
+    	<div class="img14" class="img" style="border-radius: 7px;background: url(image14.jpg);background-position: left top;padding: 20px; width: 100px;height: 50px;"> </div>
+    	
+     </div>
+     <h2 style="width: 400px;height: 30px;position: relative;left: 55%;top: -680px;">Project Details</h2>
+	 <h3 style="width: 500px;height: 30px;position: relative;left: 55%;top: -700px;">Add details and help us personalize your insights</h3>
+	 <h3 style="width: 400px;height: 30px;position: relative;left: 53%;top: -680px;">Brief:<input type="text" value=""></h3>
+	 <h3 style="width: 400px;height: 30px;position: relative;left: 53%;top: -680px;">Season:</h3>
+	 <h3 style="width: 400px;height: 30px;position: relative;left: 53%;top: -620px;">Styles:</h3>
+	 <h3 style="width: 400px;height: 30px;position: relative;left: 53%;top: -530px;">Products:</h3>
+	
+	 <h3 style="width: 400px;height: 30px;position: relative;left: 53%;top: -420px;">Invite Team Members:<input type="text" value=""></h3>
+	 
+
+	<div class="roundrect" style=" border-radius: 25px; border: 1px solid white; padding: 20px;  width: 300px; height: 30px; top: -880px;">
+	 <ul class="ks-cboxtags">
+    <li class="toggle"><input type="checkbox" id="checkboxOne" onClick="toggle_visibility(box)" value="y" style=""><label for="checkboxOne" >Summer</label></li>
+    <li><input type="checkbox" class="ks-cboxtag"id="checkboxTwo" value=""style="" ><label for="checkboxTwo"onClick="toggle(this)">Spring</label></li>
+    <li><input type="checkbox"class="ks-cboxtag" id="checkboxThree" value=""style="" ><label for="checkboxThree"onClick="toggle(this)">Winter</label></li>
+    <li><input type="checkbox"class="ks-cboxtag" id="checkboxFour" value=""style=""><label for="checkboxFour"onClick="toggle(this)">Fall</label></li>
+	</ul>
+	
+	</div>
+	<div class="roundrect" style=" border-radius: 25px; border: 1px solid white; padding: 20px;  width: 300px; height: 60px; top: -850px; ">
+	<ul class="ks-cboxtags">
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkboxFive" value=""><label for="checkboxFive"onClick="toggle(this)">Athleisure</label></li>
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkboxSix" value="" ><label for="checkboxSix"onClick="toggle(this)">Casuals</label></li>
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkboxSeven" value=""><label for="checkboxSeven"onClick="toggle(this)">Streetstyle</label></li>
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkboxEight" value=""><label for="checkboxEight"onClick="toggle(this)">Formals</label></li>
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkboxNine" value=""><label for="checkboxNine"onClick="toggle(this)">Sports</label></li>
+	</ul>
+	</div>
+	<div class="roundrect" style=" border-radius: 25px; border: 1px solid white; padding: 20px;  width: 300px; height: 60px; top: -820px; ">
+	<ul class="ks-cboxtags">
+	<li class="ks-selected"><input type="checkbox" class="ks-cboxtag2"id="checkboxEleven" value=""><label for="checkboxEleven"onClick="toggle(this)">Jackets</label></li>
+    <li><input type="checkbox" class="ks-cboxtag2"id="checkboxTwelve" value=""><label for="checkboxTwelve"onClick="toggle(this)">Jeans</label></li>
+    <li><input type="checkbox"class="ks-cboxtag2" id="checkboxThirteen" value=""><label for="checkboxThirteen"onClick="toggle(this)">Chinos</label></li>
+    <li><input type="checkbox" class="ks-cboxtag2"id="checkboxFourteen" value=""><label for="checkboxFourteen"onClick="toggle(this)">Tops</label></li>
+    <li><input type="checkbox" class="ks-cboxtag2"id="checkboxFifteen" value=""><label for="checkboxFifteen"onClick="toggle(this)">Vests</label></li>
+	</ul>
+	</div>
+	<!-- <div class="hidden" style="position: relative;top: -1250px;width: 400px;left: 300px;"> -->
+	<ul class="ks-cboxtags1" style="width: 200px;">
+	<h3 style="color: white;">Season</h3>
+    <li id="box"><input type="checkbox" class="ks-cboxtag"id="checkbox1" value="" style=""><label for="checkbox1">Summer</label></li>
+    <li><input type="checkbox" class="ks-cboxtag"id="checkbox2" value=""style="" ><label for="checkboxTwo">Spring</label></li>
+    <li><input type="checkbox"class="ks-cboxtag" id="checkbox3" value=""style="" ><label for="checkboxThree">Winter</label></li>
+    <li><input type="checkbox"class="ks-cboxtag" id="checkbox4" value=""style=""><label for="checkboxFour">Fall</label></li>
+	</ul>
+	<ul class="ks-cboxtags1" style="width: 200px;position: relative;top: -1250px;">
+		<h3 style="color: white;">Styles</h3>
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkbox5" value=""><label for="checkboxFive">Athleisure</label></li>
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkbox6" value="" ><label for="checkboxSix">Casuals</label></li>
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkbox7" value=""><label for="checkboxSeven">Streetstyle</label></li>
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkbox8" value=""><label for="checkboxEight">Formals</label></li>
+    <li><input type="checkbox"class="ks-cboxtag1" id="checkbox9 value=""><label for="checkboxNine">Sports</label></li>
+	</ul>
+	<ul class="ks-cboxtags1"style="width: 200px;position: relative;top: -1250px;">
+		<h3 style="color: white;">Products</h3>
+	<li class="ks-selected"><input type="checkbox" class="ks-cboxtag2"id="checkboxEleven" value=""><label for="checkbox11">Jackets</label></li>
+    <li><input type="checkbox" class="ks-cboxtag2"id="checkbox12" value=""><label for="checkboxTwelve">Jeans</label></li>
+    <li><input type="checkbox"class="ks-cboxtag2" id="checkbox13" value=""><label for="checkboxThirteen">Chinos</label></li>
+    <li><input type="checkbox" class="ks-cboxtag2"id="checkbox14" value=""><label for="checkboxFourteen">Tops</label></li>
+    <li><input type="checkbox" class="ks-cboxtag2"id="checkbox15" value=""><label for="checkboxFifteen">Vests</label></li>
+	</ul>
+<!-- </div> -->
+<!-- <script>
+
+// box1.style.visibility = 'hidden';
+function toggle_visibility(id) {
+	var box1 = document.getElementById(box);
+  if (box1.style.display=='block'){
+    box1.style.display = 'none';}
+  else{
+    box1.style.display= 'block';
+  }
+  
+}
+</script> -->
+<script type="text/javascript">
+$('.toggle').click(function() {
+    $('#box').toggle('slow');
+   });
+</script>
+</div>
+</body>
+
+</html>
